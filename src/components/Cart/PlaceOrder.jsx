@@ -46,7 +46,7 @@ function PlaceOrder({userId}) {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/user/profile", form);
+      const response = await axios.post("https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/user/profile", form);
       console.log("Server response:", response.data);
       setStep(2);
       setCompleted(true);

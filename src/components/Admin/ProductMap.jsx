@@ -13,7 +13,7 @@ const ProductMap = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:3000/product/getAllProducts');
+      const res = await axios.get('https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/getAllProducts');
       setProducts(res.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -29,7 +29,7 @@ const ProductMap = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
     try {
-      await axios.delete(`http://localhost:3000/product/deleteProduct/${id}`);
+      await axios.delete(`https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/deleteProduct/${id}`);
       setProducts(products.filter(product => product._id !== id));
     } catch (error) {
       alert("Error deleting product");
@@ -68,7 +68,7 @@ const ProductMap = () => {
         color: editData.color.split(',').map(c => c.trim()),
         size: editData.size.split(',').map(s => s.trim()),
       };
-      await axios.put(`http://localhost:3000/product/updateProduct/${id}`, updated);
+      await axios.put(`https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/updateProduct/${id}`, updated);
       setEditId(null);
       fetchProducts();
     } catch (error) {

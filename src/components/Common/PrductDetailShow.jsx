@@ -29,7 +29,7 @@ const ProductDetailShow = () => {
     const fetchProduct = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`http://localhost:3000/product/getProductById/${id}`);
+        const res = await fetch(`https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/getProductById/${id}`);
         const data = await res.json();
         setProduct(data);
         setSelectedColor(data.color?.[0] || "");

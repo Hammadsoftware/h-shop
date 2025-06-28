@@ -26,7 +26,7 @@ export default function Product() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("http://localhost:3000/product/getAllProducts");
+        const res = await fetch("https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/getAllProducts");
         const data = await res.json();
         setProducts(Array.isArray(data) ? data : []);
       } catch (err) {

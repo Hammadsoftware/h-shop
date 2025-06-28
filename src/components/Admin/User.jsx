@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Fetch users from your updated API
 const fetchUsers = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/user/getAllUsers");
+    const response = await axios.get("https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/user/getAllUsers");
     return response.data.users; // Extract the users array
   } catch (error) {
     console.error("Error fetching users:", error);
