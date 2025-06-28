@@ -30,7 +30,7 @@ function AdminDashboard() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/user/logout", {
+      await axios.get("http://16.171.149.3:3000/user/logout", {
         withCredentials: true,
       });
       dispatch(setLogout());

@@ -30,7 +30,7 @@ const [userId,setUserId] = useState();
 
     try {
       const res = await axios.post(
-        "https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/cart/add",
+        "http://16.171.149.3:3000/cart/add",
         {
           userId: user._id,
           products: items.map((item) => ({

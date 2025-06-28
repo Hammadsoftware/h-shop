@@ -76,7 +76,7 @@ const ProductDashboard = () => {
     };
 
     try {
-      await axios.post('https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/product/createProduct', product);
+      await axios.post('http://16.171.149.3:3000/product/createProduct', product);
       toast.success("Product created successfully!");
       // Optionally reset form
       nameRef.current.value = "";

@@ -17,7 +17,7 @@ const Signup = ({ setIsLogin }) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("https://3c1edb59-3b75-4c06-96e9-b2e37866780b-00-3knlx3crgk38p.pike.replit.dev/user/register", form);
+      const res = await axios.post("http://16.171.149.3:3000/user/register", form);
       if (res.status === 201) {
         toast.success("Registration successful! Please log in.");
         setForm({ name: "", email: "", password: "" });
